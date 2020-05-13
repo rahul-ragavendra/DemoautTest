@@ -100,9 +100,9 @@ public class TestUtil extends TestBase {
 
 	//Initializing to generate Extent report 4.0
 	public static ExtentReports createInstance() {
-		/*String reportName = getReportName();
-		new File(directory).mkdirs();*/
-		String path = directory + "Extent" + ".html";
+		//String reportName = getReportName();
+		new File(directory).mkdirs();
+		String path = directory + "Extent"+".html";
 		ExtentSparkReporter htmlReporter = new ExtentSparkReporter(path);
 		htmlReporter.config().setEncoding("UTF-8");
 		htmlReporter.config().setDocumentTitle("Automation Report");
@@ -145,8 +145,7 @@ public class TestUtil extends TestBase {
 	}
 
 	public void pdf() throws IOException, DocumentException {
-		/*File file = new File(TestUtil.directory + "/" + TestUtil.date() + ".pdf");
-		file.getParentFile().mkdirs();*/
-		createPdf(TestUtil.directory + "TestReport" + ".pdf");
+		//File file = new File(TestUtil.directory + "/" + "TestReport" + ".pdf");
+		createPdf(TestUtil.directory + "/" + "TestReport" + ".pdf");
 	}
 }

@@ -43,7 +43,7 @@ public class LoginTest extends TestBase {
 			Assert.assertTrue(driver.getCurrentUrl().startsWith("http://newtours.demoaut.com/mercuryreservation.php"));
 	}
 	
-	@Test(priority=2,dataProvider = "getData_false")
+	@Test(priority=1,dataProvider = "getData_false")
 	public void Logintest_falseValidate(String Username, String Password) throws Exception, InterruptedException {
 		loginPage.login(Username, Password);
 			Assert.assertTrue(driver.getCurrentUrl().contains("http://newtours.demoaut.com/mercurysignon.php"));

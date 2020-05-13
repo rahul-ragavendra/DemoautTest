@@ -12,7 +12,7 @@ public class SendEmail extends TestBase {
 	//Create attachment
 	public void mail() throws EmailException{
 	EmailAttachment attachment = new EmailAttachment();
-	String path = TestUtil.directory + "TestReport" + ".pdf";
+	String path = TestUtil.directory + "/" + "TestReport" + ".pdf";
     attachment.setPath(path);
     attachment.setDisposition(EmailAttachment.ATTACHMENT);
     attachment.setDescription("Extent Report");
